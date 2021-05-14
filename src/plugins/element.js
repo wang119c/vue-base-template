@@ -79,6 +79,11 @@ import {
   Notification
 } from 'element-ui'
 
+// 默认的设置
+Vue.prototype.$ELEMENT = {
+  size: 'small'
+}
+
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Autocomplete)
