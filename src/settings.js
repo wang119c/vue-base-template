@@ -4,5 +4,6 @@
  */
 module.exports = {
   title: 'Vue base template',
-  errorLog: ['production', 'test', 'development']
+  // 值可以:  'production' | ['production', 'development', 'test']
+  errorLog: 'production'
 }

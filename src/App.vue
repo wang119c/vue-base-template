@@ -17,6 +17,7 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
+      console.log(1 / 111)
     })
   }
 }
