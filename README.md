@@ -42,3 +42,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - path-to-regexp
 - screenfull
 - vue-splitpane
+- videojs
