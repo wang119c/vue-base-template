@@ -43,3 +43,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - screenfull
 - vue-splitpane
 - videojs
+- throttle-debounce
+- uuid
