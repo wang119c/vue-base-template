@@ -79,6 +79,23 @@ module.exports = {
         // https://webpack.js.org/configuration/optimization/#optimizationruntimechunk
         config.optimization.runtimeChunk('single')
       })
+
+    // 配置显示不出svg
+    config.module
+      .rule('svg')
+      .exclude.add(resolve('src/icons'))
+      .end()
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(resolve('src/icons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+      .end()
   }
 
   // devServer: {

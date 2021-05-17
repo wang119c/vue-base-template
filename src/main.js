@@ -13,6 +13,8 @@ import './plugins/element.js'
 import './utils/error-log'
 import * as filters from './filters'
 
+import './icons'
+
 // 注册全局filters
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])

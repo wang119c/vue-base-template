@@ -24,7 +24,7 @@ if (checkNeed()) {
     // https://forum.vuejs.org/t/dispatch-in-vue-config-errorhandler-has-some-problem/23500/2  解决错误
     Vue.nextTick(() => {
       // todo 这里需要发送错误日志
-      console.error(err, info)
+      console.error('===错误日志手机====', err, info)
     })
   }
 }
