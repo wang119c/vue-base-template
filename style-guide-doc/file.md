@@ -29,6 +29,10 @@
 @/views/svg-icons/require-icons.js
 ```
 
+# css
+在css 
+
+
 > 使用横线连接 (kebab-case)来命名views主要是出于以下几个考虑。
 
 > views下的.vue文件代表的是一个路由，所以它需要和component进行区分(component 都是大写开头)
