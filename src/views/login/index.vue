@@ -60,6 +60,8 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
+// import { login } from '@/api/user'
+import request from '@/utils/request'
 
 export default {
   name: 'Login',
@@ -140,7 +142,17 @@ export default {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
-          // todo 这里执行登录
+          this.$store.dispatch('user/login', this.loginForm)
+            .then(() => {
+              this.$router.push({
+                path: this.redirect || '/',
+                query: this.otherQuery
+              })
+              this.loading = false
+            })
+            .catch(() => {
+              this.loading = false
+            })
         } else {
           console.log('登录失败')
           return false

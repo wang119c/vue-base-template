@@ -10,7 +10,7 @@ function resolve (dir) {
 const name = defaultSettings.title || 'Vue base template'
 
 // 定制固定端口
-// const port = process.env.port || process.env.npm_config_port || 8001
+const port = process.env.port || process.env.npm_config_port || 8001
 
 // 定制配置项  https://cli.vuejs.org/config/
 module.exports = {
@@ -96,15 +96,20 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
+  },
+  devServer: {
+    port: port,
+    open: true,
+    overlay: {
+      warnings: false,
+      errors: true
+    },
+    before: require('./mock/mock-server.js')
+    // proxy: {
+    //   [process.env.VUE_APP_BASE_API]: {
+    //     target: `http://localhost:${port}`,
+    //     changeOrigin: true
+    //   }
+    // }
   }
-
-  // devServer: {
-  //   port: port,
-  //   open: true,
-  //   overplay: {
-  //     warning: false,
-  //     errors: true
-  //   }
-  // },
-
 }
