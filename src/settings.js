@@ -5,5 +5,9 @@
 module.exports = {
   title: 'Vue base template',
   // 值可以:  'production' | ['production', 'development', 'test']
-  errorLog: 'production'
+  errorLog: 'production',
+  showSettings: true,
+  tagsView: true,
+  fixedHeader: false,
+  sidebarLogo: false
 }

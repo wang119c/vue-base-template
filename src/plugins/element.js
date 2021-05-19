@@ -73,6 +73,7 @@ import {
   Backtop,
   PageHeader,
   CascaderPanel,
+  Scrollbar,
   Loading,
   MessageBox,
   Message,
@@ -83,7 +84,7 @@ import {
 Vue.prototype.$ELEMENT = {
   size: 'small'
 }
-
+Vue.use(Scrollbar)
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Autocomplete)

@@ -14,6 +14,7 @@ import './utils/error-log'
 import * as filters from './filters'
 
 import './icons'
+import './permission'
 
 // 注册全局filters
 Object.keys(filters).forEach(key => {
