@@ -51,3 +51,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - throttle-debounce
 - uuid
 - mockjs
+- fuse.js
+- screenfull

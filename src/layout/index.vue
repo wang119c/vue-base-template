@@ -4,10 +4,10 @@
     <Sidebar class="sidebar-container"></Sidebar>
     <div class="main-container">
       <div>
-        <div>top</div>
-        <div>tags</div>
+        <Navbar></Navbar>
+        <TagsView v-if="needTagsView"></TagsView>
       </div>
-      <div>main</div>
+      <AppMain />
       <div>right-main</div>
     </div>
   </div>
@@ -16,22 +16,27 @@
 <script>
 
 import { mapState } from 'vuex'
-import { Sidebar } from '@/layout/components'
+import { Sidebar, Navbar, TagsView, AppMain } from '@/layout/components'
 
 export default {
   name: 'Layout',
   components: {
-    Sidebar
+    Sidebar,
+    Navbar,
+    TagsView,
+    AppMain
   },
   computed: {
     ...mapState({
       device: (state) => state.app.device,
-      sidebar: (state) => state.app.sidebar
+      sidebar: (state) => state.app.sidebar,
+      needTagsView: (state) => state.settings.tagsView
     }),
     classObj () {
       return {}
     }
   },
+  created () {},
   methods: {
     handleClickOutside () {
       this.$store.dispatch('app/closeSideBar', { withoutAnimation: false })

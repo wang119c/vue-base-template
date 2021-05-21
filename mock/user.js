@@ -58,4 +58,13 @@ module.exports = [{
       data: info
     }
   }
+}, {
+  url: '/vue-base-template/user/logout',
+  type: 'post',
+  response: _ => {
+    return {
+      code: 20000,
+      data: 'success'
+    }
+  }
 }]

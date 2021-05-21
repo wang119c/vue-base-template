@@ -15,3 +15,10 @@ export function getInfo (token) {
     params: { token }
   })
 }
+
+export function logout () {
+  return request({
+    url: '/vue-base-template/user/logout',
+    method: 'post'
+  })
+}
